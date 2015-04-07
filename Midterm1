@@ -10,10 +10,10 @@ public class Guess {
 		 int guess;
 		 String c;
 		 String d;
-		 double count = 0;
-		 double countPW = 0; // player wins
-		 double countEG = 0; // count even guesses
-		 double countOBD = 0; // count odd by dice
+		 int count = 0;
+		 int countPW = 0; // player wins
+		 int countEG = 0; // count even guesses
+		 int countOBD = 0; // count odd by dice
 		 float percentPW = 0;
 		 float percentEG = 0;
 		 float percentOBD = 0;
@@ -53,9 +53,9 @@ public class Guess {
 					  break;
 			  }
 			  
-			  	 percentPW = (float)(countPW/count)*100;
-				 percentEG = (float)(countEG/count)*100;
-				 percentOBD = (float)(countOBD/count)*100;
+			  	 percentPW = (float)(countPW*100/count);
+				 percentEG = (float)(countEG*100/count);
+				 percentOBD = (float)(countOBD*100/count);
 				 
 				 System.out.println("Play times:"+ count);
 				 System.out.println("Times player won:"+ countPW);
