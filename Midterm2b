@@ -1,0 +1,29 @@
+public class RollAllDice {
+	private int diceSides;
+	private int diceCount;
+	private static int history = 0;
+	
+	//constructor
+	public RollAllDice (int faces) {
+		diceSides = faces;
+		roll();
+		history ++;
+	}
+	//roll
+	public int roll(){
+		diceCount = (int)(Math.random()*diceSides)+1;
+		if (diceCount > diceSides) {
+			diceCount = diceSides;
+		}
+		return diceCount;
+		}
+	//how much the dice amounts to
+	public int getDiceCount()
+	{
+		return diceCount;
+	}
+	//get number of objects or history
+	public static int getHistory(){
+			return history;
+	}
+}
